@@ -1,0 +1,6 @@
+[colors]
+background = rgba(0, 0, 0, 0.9)
+foreground = #ffffff
+
+[options]
+font = MorePerfectDOSVGA 10

@@ -1,0 +1,71 @@
+[colors]
+fg = ${xrdb:color7}
+bg = ${xrdb:color2}
+
+[bar/hacknet]
+monitor = VGA-1
+monitor-strict = false
+fixed-center = false
+
+width = 100%
+height = 24
+
+offset-y = 0
+offset-x = 0
+padding = 2
+
+background = ${colors.bg}
+forground = ${colors.fg}
+
+module-margin = 1
+
+font-0 = MorePerfectDOSVGA:size=10;4
+font-1 = Monoid Nerd Font:size=14;3
+
+modules-left = i3 cpu ram
+modules-right = network
+
+wm-name = i3
+
+[global/wm]
+margin-top = 5
+
+[module/cpu]
+type = internal/cpu
+label = CPU %percentage%
+
+[module/ram]
+type = internal/memory
+
+label = RAM %gb_free%
+
+[module/i3]
+type = internal/i3
+
+label-focused = %icon%
+label-focused-padding = 1
+label-focused-foreground = ${colors.fg}
+label-unfocused = %icon%
+label-unfocused-padding = 1
+label-visible = %icon%
+label-visible-padding = 1
+label-urgent = %icon%
+label-urgent-padding = 1
+label-urgent-foreground = #ff0000
+
+ws-icon-0 = 1; 
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+
+
+[module/network]
+type = internal/network
+interface = enp0s3
+
+label-connected = Location: %local_ip%  
