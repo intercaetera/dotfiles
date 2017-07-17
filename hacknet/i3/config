@@ -174,4 +174,4 @@ bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
 
 # run compton
-compton
+exec --no-startup-id compton &
