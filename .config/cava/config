@@ -1,0 +1,14 @@
+[general]
+mode = normal 
+framerate = 60
+
+bars = 0
+bar_width = 1
+bar_spacing = 2
+
+[color]
+foreground = black 
+
+[smoothing]
+monstercat = 1
+gravity = 0.7
