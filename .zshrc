@@ -86,3 +86,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Run pywal in new terminals
 (wal -rt &)
+
+alias windows="sudo grub-reboot 2 && reboot -i"

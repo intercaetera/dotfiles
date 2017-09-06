@@ -148,22 +148,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-        tray_output primary
-}
-
 # remove title bars
-new_window pixel 1
-
-# edges
-
+new_window pixel 0
 
 # gaps
-gaps outer 20
-gaps inner 20
+gaps outer 50
+gaps inner 10
 
 # Colours
 set_from_resource $fg i3wm.color7 #f0f0f0
@@ -196,3 +186,9 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 
 # keyboard layout switches
 exec --no-startup-id setxkbmap -option compose:rctrl,grp:shifts_toggle -layout pl,gr -model pc105
+
+# polybar
+exec --no-startup-id polybar newbar
+
+# lock
+bindsym $mod+Shift+b exec lock
