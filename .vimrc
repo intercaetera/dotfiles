@@ -12,4 +12,13 @@ set shiftwidth=4
 set softtabstop=4
 
 " syntastic
-let g:syntastic_javascript_checkers = ['standard'] 
+let g:syntastic_javascript_checkers = ['eslint'] 
+
+" word wrap
+set wrap linebreak nolist
+
+" jsx
+let g:jsx_ext_required = 0
+
+" colorscheme
+colorscheme wal
