@@ -152,7 +152,7 @@ bindsym $mod+r mode "resize"
 new_window pixel 0
 
 # gaps
-gaps outer 50
+gaps outer 10
 gaps inner 10
 
 # Colours
@@ -171,18 +171,22 @@ client.background       $bg
 bindsym $mod+d exec rofi -show run
 
 # compton
-exec --no-startup-id compton &
+exec --no-startup-id compton
 
 # feh
-exec --no-startup-id ~/.fehbg &
+exec --no-startup-id ~/.fehbg
 
 # wal
-exec --no-startup-id wal -rt &
+exec --no-startup-id wal -R
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-volume 1 0%
+
+# Xbacklight
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # keyboard layout switches
 exec --no-startup-id setxkbmap -option compose:rctrl,grp:shifts_toggle -layout pl,gr -model pc105
@@ -192,3 +196,6 @@ exec --no-startup-id polybar newbar
 
 # lock
 bindsym $mod+Shift+b exec lock
+
+# natural scrolling
+exec --no-startup-id ~/scripts/inverse-scroll.sh
