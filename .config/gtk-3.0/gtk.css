@@ -212,3 +212,10 @@ VteTerminal {
 	box-shadow: none;
 	margin: 1;
 }
+
+.xfce4-panel {
+	font-family: "Roboto";
+	font-weight: bold;
+	background-color: #000;
+	color: #fff;
+}
