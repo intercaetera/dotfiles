@@ -1,0 +1,13 @@
+rofi.color-enabled: true
+
+rofi.font: Roboto 20
+rofi.eh: 1
+rofi.line-margin: 30
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.lines: 3
+rofi.width: 1366
+rofi.padding: 300
+rofi.bw: 0
+rofi.auto-select: true
+rofi.ssh-client: termite
