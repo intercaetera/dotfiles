@@ -202,3 +202,6 @@ bindsym $mod+Shift+b exec lock
 
 # natural scrolling
 exec --no-startup-id ~/scripts/inverse-scroll.sh
+
+# screenshot
+bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots'
