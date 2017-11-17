@@ -88,4 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # Run pywal in new terminals
 (wal -rt &)
 
+# Add bin to path
+PATH="${PATH}:${HOME}/.local/bin/"
+
 alias windows="sudo grub-reboot 2 && reboot -i"
