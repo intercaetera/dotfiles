@@ -85,10 +85,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Run pywal in new terminals
-(wal -rt &)
-
 # Add bin to path
 PATH="${PATH}:${HOME}/.local/bin/"
+
+# Run pywal in new terminals
+(wal -rt &)
 
 alias windows="sudo grub-reboot 2 && reboot -i"
