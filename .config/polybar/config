@@ -1,3 +1,5 @@
+; Inspired by https://github.com/jarvick257/rice/blob/master/polybar/config
+
 [colors]
 bg          = ${xrdb:color0}
 fg          = ${xrdb:color7}
@@ -10,7 +12,7 @@ arc-blue    = ${xrdb:color2}
 [template/bar]
 enable-ipc = true
 width = 100%
-height = 27
+height = 24
 
 background = ${colors.bg}
 foreground = ${colors.fg}
@@ -23,8 +25,8 @@ overline-color = ${self.background}
 underline-size = 1
 underline-color = ${self.background}
 
-padding-left = 0
-padding-right = 0
+padding-left = 3
+padding-right = 3
 module-margin-left = 3
 module-margin-right = 3
 
@@ -35,9 +37,9 @@ wm-restack = i3
 [bar/right]
 inherit = template/bar
 monitor = DVI-I-0
-modules-left = volume mail eth
+modules-left = volume mail bitcoin
 modules-center = i3
-modules-right = mxbattery clock
+modules-right = clock
 
 [bar/left]
 inherit = template/bar
@@ -49,13 +51,22 @@ modules-right = clock
 [bar/laptop]
 inherit = template/bar
 monitor = DVI-D-0
-modules-left = wired-network wireless-network volume
+modules-left = wired-network wireless-network volume bitcoin
 modules-center = cpu i3 memory
 modules-right = xbacklight clock
 
+[module/bitcoin]
+type = custom/script
+interval = 10
+format = <label>
+format-prefix = " "
+tail = true
+format-foreground = ${colors.inactive-fg}
+exec = ~/.config/polybar/bitcoin.py
+
 [module/xbacklight]
 type = internal/xbacklight
-output = eDP-1
+output = eDP1
 format = <ramp> <bar>
 
 ramp-0 = 
@@ -195,7 +206,7 @@ label-disconnected-foreground = ${colors.inactive-fg}
 
 [module/wireless-network]
 inherits = template/network
-interface = wlp4s0
+interface = wlp2s0
 format-connected = <label-connected>
 label-connected = "   %essid%  (%signal%%)"
 label-connected-foreground = ${colors.inactive-fg}
