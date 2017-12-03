@@ -67,7 +67,7 @@
 
 .autocomplete-richlistitem {
 	color: var(--foreground) !important;
-	font-family: "PragmataPro" !important;
+	font-family: "Iosevka" !important;
 }
 
 .autocomplete-richlistitem[selected=true] {
@@ -123,7 +123,7 @@ toolbarbutton {
 }
 
 #navigator-toolbox {
-	font-family: "PragmataPro" !important;
+	font-family: "Iosevka" !important;
 	font-size: 0.9em;
 	box-shadow: 0 0 5px 5px var(--background);
 	position: static;
