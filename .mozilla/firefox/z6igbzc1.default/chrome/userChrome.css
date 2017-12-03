@@ -1,0 +1,130 @@
+@import url('file:///home/mrhudson/.cache/wal/colors.css');
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+:root {
+	--backbutton-background: transparent !important;
+	--backbutton-hover-background: transparent !important;
+	--backbutton-active-background: transparent !important;
+	--backbutton-border-color: transparent !important;
+	--toolbox-border-bottom-color: var(--background) !important;
+	--tab-min-height: 20px !important;
+	--tabs-border: transparent !important;
+	--toolbar-bgcolor: var(--background) !important;
+	--toolbar-bgimage: transparent !important;
+	--tab-line-color: var(--color2) !important;
+}
+
+::-moz-selection {
+	background: var(--color4) !important;
+}
+
+.tabbrowser-tabs {
+	background: var(--background);
+	color: var(--foreground);
+}
+
+.tabbrowser-tab[selected="true"] {
+	color: var(--foreground) !important;
+}
+
+#window-controls {
+	display: none;
+}
+
+#nav-bar {
+	background: var(--background) !important;
+	color: var(--foreground);
+	border-bottom: none;
+	position: fixed !important;
+  right: 0;
+	bottom: 0;
+	width: 100% !important;
+	
+	box-shadow: 0 0 5px 3px var(--background);
+	
+	display: flex;
+	align-items: center;
+}
+
+#PopupAutoCompleteRichResult {
+  background: var(--background) !important;
+	border: none !important;
+	margin-top: -142px;
+	height: 100px;;
+	box-shadow: none !important;
+	
+	/*position: fixed;
+	bottom: 0;*/
+}
+
+#mainPopupSet * {
+	box-shadow: none !important;
+}
+
+.search-one-offs {
+	display: none !important;
+}
+
+.autocomplete-richlistitem {
+	color: var(--foreground) !important;
+	font-family: "PragmataPro" !important;
+}
+
+.autocomplete-richlistitem[selected=true] {
+  background: var(--color2) !important;
+}
+
+.ac-action-text {
+	color: var(--color1) !important;
+}
+
+#PanelUI-button {
+	flex: 1;
+}
+
+#nav-bar-customization-target {
+	display: flex;
+	align-items: center;
+	flex: 40;
+	width 100%;
+}
+
+.tab-close-button {
+	display: none;
+}
+
+toolbarbutton {
+	color: var(--foreground) !important;
+}
+
+#urlbar-container {
+	flex: 1;
+	width 100%;
+}
+
+#urlbar, .searchbar-textbox {
+	background: var(--background) !important;
+	color: var(--foreground) !important;
+	border: none !important;
+	width: 100% !important;
+}
+
+#connection-icon {
+	fill: var(--color2) !important;
+}
+
+#page-action-buttons {
+	display: none;
+}
+
+#PersonalToolbar {
+	background: var(--background) !important;
+	border-bottom: none;
+}
+
+#navigator-toolbox {
+	font-family: "PragmataPro" !important;
+	font-size: 0.9em;
+	box-shadow: 0 0 5px 5px var(--background);
+	position: static;
+}
