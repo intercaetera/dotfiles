@@ -4,13 +4,15 @@ killall -q polybar
 
 PBMONITOR=$(polybar -m | tail -1 | sed -e 's/:.*$//g')
 
-if [ $PBMONITOR = "DVI-I-0" ]
+echo $PBMONITOR
+
+if [ "$PBMONITOR" = "DVI-I-0" ]
 then
 	polybar left &
 	polybar right &
 fi
 
-if [ $PBMONITOR = "eDP1" ]
+if [ "$PBMONITOR" = "eDP1" ]
 then
 	polybar laptop &
 fi

@@ -168,16 +168,11 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 
-bindsym $mod+d exec rofi -show run -display-run ":"
-
 # compton
 exec --no-startup-id compton
 
 # feh
 exec --no-startup-id ~/.fehbg
-
-# rofi config
-exec --no-startup-id xrdb -load .config/rofi/config
 
 # wal
 exec --no-startup-id wal -R
@@ -195,7 +190,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 exec --no-startup-id setxkbmap -option compose:rctrl,grp:shifts_toggle -layout pl,gr -model pc105
 
 # polybar
-exec --no-startup-id xfce4-panel
+exec_always --no-startup-id $HOME/.config/polybar/startup.sh
 
 # lock
 bindsym $mod+Shift+b exec lock
@@ -205,3 +200,6 @@ exec --no-startup-id ~/scripts/inverse-scroll.sh
 
 # screenshot
 bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots'
+
+# albert
+exec --no-startup-id albert
