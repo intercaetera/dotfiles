@@ -3,4 +3,4 @@ background = rgba(0, 0, 0, 0.95)
 foreground = #ffffff
 
 [options]
-font = Iosevka Term 11
+font = Iosevka Term 12
