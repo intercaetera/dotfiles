@@ -1,117 +1,258 @@
 [colors]
-bg = ${xrdb:color0}
-fg = ${xrdb:color7}
-focused = ${xrdb:color2}
+bg          = ${xrdb:color0}
+fg          = ${xrdb:color7}
+inactive-bg = #2f343f
+inactive-fg = #676E7D
+urgent      = #E53935
+arc-blue    = ${xrdb:color2}
 
-[global/wm]
-margin-top = 5
-margin-bottom = 5
 
-[bar/newbar]
+[template/bar]
+enable-ipc = true
 width = 100%
 height = 27
-offset-x = 0
-offset-y = 0
 
 background = ${colors.bg}
 foreground = ${colors.fg}
 
-padding-left = 10
-padding-right = 10
+border-bottom-size = 0
+border-bottom-color = ${colors.inactive-bg}
 
-module-margin-left = 10
-module-margin-right = 10
+overline-size = 0
+overline-color = ${self.background}
+underline-size = 1
+underline-color = ${self.background}
 
-modules-left = i3 volume
-modules-center = date
-modules-right = memory cpu xkeyboard powermenu
+padding-left = 0
+padding-right = 0
+module-margin-left = 3
+module-margin-right = 3
 
-font-0 = "Roboto:size=9:weight=bold"
-font-1 = "Roboto:size=9:weight=regular"
+font-0 = "DejaVu Sans:size=8;2"
+font-1 = "FontAwesome:size=10;0"
+wm-restack = i3
 
-[module/i3]
-type = internal/i3
-index-sort = true
+[bar/right]
+inherit = template/bar
+monitor = DVI-I-0
+modules-left = volume mail eth
+modules-center = i3
+modules-right = mxbattery clock
 
-label-unfocused = %index%
-label-unfocused-padding = 2
+[bar/left]
+inherit = template/bar
+monitor = DVI-D-0
+modules-left = wired-network
+modules-center = cpu i3 memory
+modules-right = clock
 
-label-focused = %index%
-label-focused-foreground = ${colors.focused}
-label-focused-padding = 2
+[bar/laptop]
+inherit = template/bar
+monitor = DVI-D-0
+modules-left = wired-network wireless-network volume
+modules-center = cpu i3 memory
+modules-right = xbacklight clock
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-label-layout = %{F#55}%{F-} %layout%
+[module/xbacklight]
+type = internal/xbacklight
+output = eDP-1
+format = <ramp> <bar>
 
-[module/memory]
-type = internal/memory
-interval = 2
-label = %gb_used%/%gb_total%
+ramp-0 = 
+ramp-0-foreground = ${colors.inactive-bg}
+ramp-1 = 
+ramp-1-foreground = ${colors.inactive-fg}
+ramp-2 = 
+ramp-2-foreground = ${colors.fg}
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-label = CPU - %percentage%%
-
-[module/date]
-type = internal/date
-interval = 1.0
-date = %A, %e %B
-time = %H:%M
-time-alt = %H:%M:%S
-
-label = %date% %time%
+bar-width = 12
+bar-indicator = |
+bar-indicator-font = 6
+bar-indicator-foreground = ${colors.fg}
+bar-fill = ─
+bar-fill-font = 6
+bar-fill-foreground = ${colors.arc-blue}
+bar-empty = ─
+bar-empty-font = 6
+bar-empty-foreground = ${colors.inactive-bg}
 
 [module/volume]
 type = internal/volume
+master-mixer=Master
+format-volume = <ramp-volume> <bar-volume>
+format-muted = <label-muted>
 
-format-volume = <bar-volume>
+label-muted-foreground = ${colors.inactive-fg}
+label-muted =  muted
 
-bar-volume-width = 10
-bar-volume-foreground-0 = ${xrdb:color3}
-bar-volume-foreground-1 = ${xrdb:color3}
-bar-volume-foreground-2 = ${xrdb:color3}
-bar-volume-foreground-3 = ${xrdb:color3}
-bar-volume-foreground-4 = ${xrdb:color5}
-bar-volume-foreground-5 = ${xrdb:color5}
-bar-volume-foreground-6 = ${xrdb:color2}
-bar-volume-gradient = false
-bar-volume-indicator = I
-bar-volume-indicator-font = 1
-bar-volume-indicator-foreground = #ff
-bar-volume-fill = —
-bar-volume-fill-font = 1
-bar-volume-empty = —
-bar-volume-empty-font = 1
-bar-volume-empty-foreground = ${colors.fg}
+ramp-volume-0 = "  "
+ramp-volume-0-foreground = ${colors.inactive-bg}
+ramp-volume-1 = " "
+ramp-volume-1-foreground = ${colors.inactive-fg}
+ramp-volume-2 = 
+ramp-volume-2-foreground = ${colors.fg}
 
-[module/powermenu]
-type = custom/menu
+bar-volume-width = 12
+bar-volume-indicator = |
+bar-volume-indicator-font = 6
+bar-volume-indicator-foreground = ${colors.fg}
+bar-volume-fill = ─
+bar-volume-fill-font = 6
+bar-volume-fill-foreground = ${colors.arc-blue}
+bar-volume-empty = ─
+bar-volume-empty-font = 6
+bar-volume-empty-foreground = ${colors.inactive-bg}
 
-format-spacing = 1
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+pin-workspaces = false
 
-label-open =  power
-label-open-foreground = ${colors.fg}
-label-close =  cancel
-label-close-foreground = ${colors.fg}
-label-separator = |
-label-separator-foreground = ${colors.fg}
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = 
 
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
+label-dimmed-underline = ${root.background}
 
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+label-mode = %mode%
+label-mode-foreground = ${colors.arc-blue}
+label-mode-padding = 2
 
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
+label-focused = %icon%
+label-focused-foreground = ${colors.fg}
+label-focused-background = ${colors.inactive-bg}
+label-focused-underline = ${colors.arc-blue}
+label-focused-font = 4
+label-focused-padding = 4
+
+label-unfocused = %icon%
+label-unfocused-foreground = ${colors.inactive-fg}
+label-unfocused-underline = ${colors.bg}
+label-unfocused-font = 4
+label-unfocused-padding = 4
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.urgent}
+label-urgent-background = ${colors.bg}
+label-urgent-underline = ${colors.urgent}
+label-urgent-font = 4
+label-urgent-padding = 4
+
+label-visible = %icon%
+label-visible-foreground = ${colors.fg}
+label-visible-background = ${colors.inactive-bg}
+label-visible-font = 4
+label-visible-padding = 4
+
+
+[module/cpu]
+type = internal/cpu
+interval = 1.5
+format = <ramp-coreload>
+label = CPU %percentage%%
+ramp-coreload-foreground = ${colors.inactive-fg}
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+
+[module/memory]
+type = internal/memory
+interval = 3
+format = <bar-used>
+label = %percentage_used% %
+label-font = 10
+label-foreground = ${colors.inactive-fg}
+
+bar-used-indicator =
+bar-used-width = 5
+bar-used-fill-foreground = ${colors.inactive-fg}
+bar-used-fill = "█ "
+bar-used-empty = "█ "
+bar-used-empty-foreground = ${colors.inactive-bg}
+
+
+[template/network]
+type = internal/network
+interval = 2.0
+ping-interval = 10
+label-disconnected = "   No Connection"
+label-disconnected-foreground = ${colors.inactive-fg}
+
+
+[module/wireless-network]
+inherits = template/network
+interface = wlp4s0
+format-connected = <label-connected>
+label-connected = "   %essid%  (%signal%%)"
+label-connected-foreground = ${colors.inactive-fg}
+
+
+[module/wired-network]
+type = internal/network
+interface = enp3s0
+format-connected = <label-connected>
+label-connected = "    %local_ip%"
+label-connected-foreground = ${colors.inactive-fg}
+
+
+[module/clock]
+type = internal/date
+interval = 1
+format-padding = 0
+format-background = ${colors.bg}
+format-foreground = ${colors.fg}
+date = %%{F#bb}%a %e %b%%{F-}
+date-alt = %%{F#bb}%D%{F-}
+time = %H:%M
+time-alt = %H:%M:%S
+label = "%date% %time%  "
+format = <label>
+
+
+[template/battery]
+type = internal/battery
+full-at = 99
+
+ramp-capacity-foreground = ${colors.inactive-fg}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+label-discharging-foreground = ${colors.inactive-fg}
+label-discharging = %percentage%%
+
+label-charging-foreground = ${colors.arc-blue}
+label-charging = 
+
+format-discharging = <label-discharging> <ramp-capacity>
+format-charging = <label-charging> <ramp-capacity>
+format-full = <ramp-capacity>
+
+
+[module/bat0]
+inherit = template/battery
+battery = BAT0
+
+[module/bat1]
+inherit = template/battery
+battery = BAT1
+
+; vim:ft=dosini
 
 
