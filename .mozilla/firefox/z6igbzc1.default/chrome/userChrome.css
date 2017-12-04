@@ -130,6 +130,6 @@ toolbarbutton {
 	position: static;
 }
 
-#content browser {
+#main-window[inFullscreen='false'] #content browser {
 	padding-bottom: 32px;
 }
