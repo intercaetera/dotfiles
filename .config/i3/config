@@ -174,9 +174,6 @@ exec --no-startup-id compton
 # feh
 exec --no-startup-id ~/.fehbg
 
-# wal
-exec --no-startup-id wal -R
-
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
@@ -191,7 +188,9 @@ exec --no-startup-id setxkbmap -option compose:rctrl,grp:shifts_toggle -layout p
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/startup.sh
-exec sleep 1
+
+# wal
+exec --no-startup-id wal -R
 
 # lock
 bindsym $mod+Shift+b exec lock
