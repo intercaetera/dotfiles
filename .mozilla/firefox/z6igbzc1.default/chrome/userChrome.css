@@ -32,6 +32,11 @@
 }
 
 #nav-bar {
+	position: fixed !important;
+	bottom: 0 !important;
+}
+
+#nav-bar-customization-target {
 	background: var(--background) !important;
 	color: var(--foreground);
 	border-bottom: none;
@@ -44,17 +49,23 @@
 	
 	display: flex;
 	align-items: center;
+	width 100%;
 }
 
 #PopupAutoCompleteRichResult {
   background: var(--background) !important;
 	border: none !important;
-	margin-top: -142px;
-	height: 100px;;
-	box-shadow: none !important;
+	margin-top: -132px;
+	height: 100px;
 	
 	/*position: fixed;
 	bottom: 0;*/
+}
+
+#PanelUI-button {
+	position: fixed;
+	right: 0;
+	top: 0;
 }
 
 #mainPopupSet * {
@@ -78,17 +89,6 @@
 	color: var(--color1) !important;
 }
 
-#PanelUI-button {
-	flex: 1;
-}
-
-#nav-bar-customization-target {
-	display: flex;
-	align-items: center;
-	flex: 40;
-	width 100%;
-}
-
 .tab-close-button {
 	display: none;
 }
@@ -107,6 +107,7 @@ toolbarbutton {
 	color: var(--foreground) !important;
 	border: none !important;
 	width: 100% !important;
+	height: 32px;
 }
 
 #connection-icon {
