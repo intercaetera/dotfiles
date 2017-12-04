@@ -191,6 +191,7 @@ exec --no-startup-id setxkbmap -option compose:rctrl,grp:shifts_toggle -layout p
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/startup.sh
+exec sleep 1
 
 # lock
 bindsym $mod+Shift+b exec lock
