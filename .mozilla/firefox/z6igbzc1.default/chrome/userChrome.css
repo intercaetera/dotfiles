@@ -129,3 +129,7 @@ toolbarbutton {
 	box-shadow: 0 0 5px 5px var(--background);
 	position: static;
 }
+
+#content browser {
+	padding-bottom: 32px;
+}
