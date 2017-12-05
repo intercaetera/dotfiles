@@ -6,12 +6,19 @@
 	--backbutton-hover-background: transparent !important;
 	--backbutton-active-background: transparent !important;
 	--backbutton-border-color: transparent !important;
+	
 	--toolbox-border-bottom-color: var(--background) !important;
-	--tab-min-height: 20px !important;
-	--tabs-border: transparent !important;
+	
 	--toolbar-bgcolor: var(--background) !important;
 	--toolbar-bgimage: transparent !important;
+	
 	--tab-line-color: var(--color2) !important;
+	--tabs-border: transparent !important;
+	--tab-min-height: 20px !important;
+	
+	--arrowpanel-background: var(--background) !important;
+	--arrowpanel-color: var(--foreground) !important;
+	--arrowpanel-border-color: none !important;
 }
 
 ::-moz-selection {
@@ -114,10 +121,6 @@ toolbarbutton {
 	fill: var(--color2) !important;
 }
 
-#page-action-buttons {
-	display: none;
-}
-
 #PersonalToolbar {
 	background: var(--background) !important;
 	border-bottom: none;
@@ -130,6 +133,15 @@ toolbarbutton {
 	position: static;
 }
 
-#main-window[inFullscreen='false'] #content browser {
+#main-window #content browser {
 	padding-bottom: 32px;
+}
+
+#main-window[inFullscreen] #content browser {
+	padding-bottom: 0px;
+}
+
+
+#appMenu-mainView * {
+		border: none !important;
 }
