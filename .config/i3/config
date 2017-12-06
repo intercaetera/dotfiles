@@ -186,11 +186,11 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 # keyboard layout switches
 exec --no-startup-id setxkbmap -option compose:rctrl,grp:shifts_toggle -layout pl,gr -model pc105
 
+# wal
+# exec_always --no-startup-id wal -R
+
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/startup.sh
-
-# wal
-exec --no-startup-id wal -R
 
 # lock
 bindsym $mod+Shift+b exec lock
