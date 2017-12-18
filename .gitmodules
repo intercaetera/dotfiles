@@ -43,12 +43,12 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	path = .oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule ".vim/bundle/ale"]
-	path = .vim/bundle/ale
-	url = https://github.com/w0rp/ale.git
-[submodule ".vim/bundle/lightline.vim"]
-	path = .vim/bundle/lightline.vim
-	url = https://github.com/itchyny/lightline.vim
 [submodule ".vim/bundle/wal.vim"]
 	path = .vim/bundle/wal.vim
 	url = https://github.com/dylanaraps/wal.vim
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
