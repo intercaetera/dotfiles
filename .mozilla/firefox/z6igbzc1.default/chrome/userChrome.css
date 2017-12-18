@@ -145,3 +145,8 @@ toolbarbutton {
 #appMenu-mainView * {
 		border: none !important;
 }
+
+#PopupAutoComplete {
+	background: var(--background) !important;
+	border: none !important;
+}
