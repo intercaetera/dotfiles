@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/auto-pairs"]
 	path = .vim/bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule ".vim/bundle/vim-closetag"]
 	path = .vim/bundle/vim-closetag
 	url = https://github.com/alvan/vim-closetag.git 
@@ -28,9 +25,6 @@
 [submodule ".vim/bundle/vim-jsx"]
 	path = .vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx
-[submodule ".vim/bundle/vim-powerline"]
-	path = .vim/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline
 	url = https://github.com/powerline/powerline
@@ -52,9 +46,6 @@
 [submodule ".vim/bundle/ale"]
 	path = .vim/bundle/ale
 	url = https://github.com/w0rp/ale.git
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
 [submodule ".vim/bundle/lightline.vim"]
 	path = .vim/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
