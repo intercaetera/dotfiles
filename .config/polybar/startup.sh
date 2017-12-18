@@ -18,6 +18,4 @@ then
 	polybar laptop &
 fi
 
-while pgrep -x wal >/dev/null; do sleep 1; done
-
 wal -R
