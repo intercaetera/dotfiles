@@ -33,6 +33,7 @@ module-margin-right = 3
 
 font-0 = "Iosevka:size=8;-1"
 font-1 = "FontAwesome:size=10;0"
+font-2 = "cryptocoins:size=10;0"
 wm-restack = i3
 
 [bar/right]
@@ -63,10 +64,11 @@ modules-right = battery xbacklight clock
 type = custom/script
 interval = 10
 format = <label>
-format-prefix = " "
+format-prefix = " "
 tail = true
 format-foreground = ${colors.inactive-fg}
-exec = ~/.config/polybar/bitcoin.py
+format-font = font-0
+exec = ~/.config/polybar/litecoin.py
 
 [module/xbacklight]
 type = internal/xbacklight
