@@ -1,7 +1,7 @@
 #!/bin/zsh
 killall -q polybar
 
-while pgrep -x polybar >/dev/null; do sleep 1; done
+while pgrep -x polybar >/dev/null; do sleep 5; done
 
 PBMONITOR=$(polybar -m | tail -1 | sed -e 's/:.*$//g')
 
