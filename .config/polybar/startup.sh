@@ -17,5 +17,3 @@ if [ "$PBMONITOR" = "eDP1" ]
 then
 	polybar laptop &
 fi
-
-wal -R

@@ -187,7 +187,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 exec --no-startup-id setxkbmap -option compose:rctrl,grp:shifts_toggle -layout pl,gr -model pc105
 
 # wal
-# exec_always --no-startup-id wal -R
+exec_always --no-startup-id wal -R
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/startup.sh
