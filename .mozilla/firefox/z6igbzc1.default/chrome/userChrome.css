@@ -9,6 +9,7 @@
 	
 	--toolbox-border-bottom-color: var(--background) !important;
 	
+	--toolbarbutton-icon-fill-attention: var(--color5) !important;
 	--toolbar-bgcolor: var(--background) !important;
 	--toolbar-bgimage: transparent !important;
 	
@@ -22,7 +23,7 @@
 }
 
 ::-moz-selection {
-	background: var(--color4) !important;
+	background: var(--color1) !important;
 }
 
 .tabbrowser-tabs {
@@ -149,4 +150,12 @@ toolbarbutton {
 #PopupAutoComplete {
 	background: var(--background) !important;
 	border: none !important;
+}
+
+findbar {
+	position: fixed;
+	bottom: 38px;
+	background: var(--background) !important;
+	border: none !important;
+	box-shadow: 0 0 5px var(--background);
 }
