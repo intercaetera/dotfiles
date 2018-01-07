@@ -89,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 PATH="${PATH}:${HOME}/.local/bin/"
 
 # Run pywal in new terminals
-(wal -rt &)
+wal -c
+(cat ~/.cache/wal/sequences &)
 
 alias windows="sudo grub-reboot 2 && reboot -i"
