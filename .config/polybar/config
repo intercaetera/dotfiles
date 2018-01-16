@@ -2,9 +2,9 @@
 
 [colors]
 bg          = ${xrdb:color0}
-fg          = ${xrdb:color7}
-inactive-bg = #2f343f
-inactive-fg = #676E7D
+fg          = ${xrdb:color5}
+inactive-bg = ${xrdb:color0}
+inactive-fg = ${xrdb:color7}
 urgent      = #E53935
 arc-blue    = ${xrdb:color2}
 

@@ -42,6 +42,9 @@ h1 {
 #cat6 {
   color: var(--color6);
 }
+#cat7 {
+  color: var(--color7);
+}
 .row {
   padding: 0.5em 0;
 }
