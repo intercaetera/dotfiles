@@ -134,7 +134,7 @@ toolbarbutton {
 	position: static;
 }
 
-#main-window #content {
+#main-window #content browser, .devtools-toolbox-side-iframe {
 	padding-bottom: 38px;
 }
 
