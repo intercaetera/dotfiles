@@ -134,8 +134,8 @@ toolbarbutton {
 	position: static;
 }
 
-#main-window #content browser {
-	padding-bottom: 32px;
+#main-window #content {
+	padding-bottom: 38px;
 }
 
 #main-window[inFullscreen] #content browser {
@@ -158,4 +158,8 @@ findbar {
 	background: var(--background) !important;
 	border: none !important;
 	box-shadow: 0 0 5px var(--background);
+}
+
+.devtools-side-splitter {
+	display: none;
 }
