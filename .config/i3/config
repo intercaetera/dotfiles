@@ -152,17 +152,18 @@ bindsym $mod+r mode "resize"
 new_window pixel 0
 
 # gaps
-gaps outer 10
-gaps inner 10
+gaps outer 0
+gaps inner 5
 
 # Colours
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $pr i3wm.color5
 
 # class                 border  backgr. text indicator child_border
 client.focused          $fg     $bg     $fg  $bg       $bg
 client.focused_inactive $fg     $bg     $fg  $bg       $bg
-client.unfocused        $fg     $bg     $fg  $bg       $bg
+client.unfocused        $pr     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
