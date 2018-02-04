@@ -204,3 +204,6 @@ bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshots'
 
 # albert
 exec --no-startup-id albert
+
+# bootstrap
+exec_always --no-startup-id ~/.startup.sh
