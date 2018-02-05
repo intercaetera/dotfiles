@@ -1,0 +1,91 @@
+@import '/home/justinian/.cache/wal/colors.scss';
+
+* { 
+  border: none;
+  color: $color1;
+  background-color: $background;
+  font-family: "Iosevka" !important;
+}
+
+#frame {
+  padding: 6px;
+  border-radius: 12px;
+  background-color: $background;
+  border: 1px solid $foreground;
+  min-width: 640px;
+  max-width: 640px;
+}
+
+#inputLine {
+  padding: 2px;
+  border-radius: 2px;
+  font-size: 16px;
+  selection-color: $background;
+  selection-background-color: $foreground;
+  background-color: $background;
+  color: $foreground
+}
+
+#settingsButton {
+  color: $foreground;
+  background-color: $background;
+  padding: 4px;
+  margin: 6px 6px 0px 0px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 10px;
+  min-width:13px;
+  min-height:13px;
+  max-width:13px;
+  max-height:13px;
+}
+
+/********** ListViews **********/
+QListView QScrollBar:vertical  {
+  width: 3px;
+  background: transparent;
+}
+
+QListView QScrollBar::handle:vertical  {
+  background: $foreground;
+  min-height: 24px;
+}
+
+QListView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QListView QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical,
+QListView QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+  border: 0px;
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+/********** actionList **********/
+QListView#actionList {
+  font-size: 12px;
+}
+
+QListView#actionList::item{
+  height: 18px;
+}
+
+QListView#actionList::item::selected{
+  background: $foreground;
+}
+
+/********** proposalList **********/
+QListView#resultsList {
+  icon-size: 14px;
+  font-size: 14px;
+  color: $color1;
+}
+
+QListView#resultsList::item{
+  padding: 12px;
+}
+
+
+QListView#resultsList::item::selected{
+  background: $foreground;
+  color: $background;
+}
+      

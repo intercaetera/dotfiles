@@ -1,0 +1,74 @@
+* {
+  border: none;
+  color: #49544B;
+  background-color: #03090D;
+  font-family: "Iosevka" !important; }
+
+#frame {
+  padding: 6px;
+  border-radius: 12px;
+  background-color: #03090D;
+  border: 1px solid #79f2f5;
+  min-width: 640px;
+  max-width: 640px; }
+
+#inputLine {
+  padding: 2px;
+  border-radius: 2px;
+  font-size: 16px;
+  selection-color: #03090D;
+  selection-background-color: #79f2f5;
+  background-color: #03090D;
+  color: #79f2f5; }
+
+#settingsButton {
+  color: #79f2f5;
+  background-color: #03090D;
+  padding: 4px;
+  margin: 6px 6px 0px 0px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 10px;
+  min-width: 13px;
+  min-height: 13px;
+  max-width: 13px;
+  max-height: 13px; }
+
+/********** ListViews **********/
+QListView QScrollBar:vertical {
+  width: 3px;
+  background: transparent; }
+
+QListView QScrollBar::handle:vertical {
+  background: #79f2f5;
+  min-height: 24px; }
+
+QListView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QListView QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical,
+QListView QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+  border: 0px;
+  width: 0px;
+  height: 0px;
+  background: transparent; }
+
+/********** actionList **********/
+QListView#actionList {
+  font-size: 12px; }
+
+QListView#actionList::item {
+  height: 18px; }
+
+QListView#actionList::item::selected {
+  background: #79f2f5; }
+
+/********** proposalList **********/
+QListView#resultsList {
+  icon-size: 14px;
+  font-size: 14px;
+  color: #49544B; }
+
+QListView#resultsList::item {
+  padding: 12px; }
+
+QListView#resultsList::item::selected {
+  background: #79f2f5;
+  color: #03090D; }
