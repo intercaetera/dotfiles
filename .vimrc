@@ -18,6 +18,9 @@ set linebreak
 " syntastic
 let g:syntastic_javascript_checkers = ['eslint'] 
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
 " word wrap
 set wrap linebreak nolist
 
