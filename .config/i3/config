@@ -190,9 +190,6 @@ exec --no-startup-id setxkbmap -option compose:rctrl,grp:shifts_toggle -layout p
 # wal
 exec_always --no-startup-id wal -R
 
-# polybar
-exec_always --no-startup-id $HOME/.config/polybar/startup.sh
-
 # lock
 bindsym $mod+Shift+b exec lock
 
@@ -207,3 +204,7 @@ exec --no-startup-id albert
 
 # bootstrap
 exec_always --no-startup-id ~/.startup.sh
+#
+# polybar
+exec_always --no-startup-id $HOME/.config/polybar/startup.sh
+
