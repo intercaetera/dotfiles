@@ -15,6 +15,9 @@ set softtabstop=4
 set wrap
 set linebreak
 
+" copy
+set clipboard=unnamedplus
+
 " syntastic
 let g:syntastic_javascript_checkers = ['eslint'] 
 
@@ -32,6 +35,7 @@ colorscheme wal
 
 " notes
 let g:notes_directories = ['~/Documents/notes']
+
 
 " cursor
 let &t_SI = "\<Esc>[6 q"
