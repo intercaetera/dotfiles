@@ -84,11 +84,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vi=vim
+alias tr='tree -I node-modules'
 
 # Add bin to path
 PATH="${PATH}:${HOME}/.local/bin/"
 
 # Run pywal in new terminals
-(cat ~/.cache/wal/sequences &)
+cat ~/.cache/wal/sequences
 
 alias windows="sudo grub-reboot 2 && reboot -i"
+
+clear
