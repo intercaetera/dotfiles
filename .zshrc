@@ -86,6 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=vim
 alias tr='tree -I node-modules'
+alias lsd='ls -l | lolcat'
 
 # Add bin to path
 PATH="${PATH}:${HOME}/.local/bin/"
