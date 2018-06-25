@@ -97,3 +97,4 @@ cat ~/.cache/wal/sequences
 alias windows="sudo grub-reboot 2 && reboot -i"
 
 clear
+fortune -s
