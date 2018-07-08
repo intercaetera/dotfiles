@@ -1,3 +1,48 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	path = .oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".vim/bundle/VimCompletesMe"]
+	path = .vim/bundle/VimCompletesMe
+	url = https://github.com/ajh17/VimCompletesMe
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/bundle/wal.vim"]
+	path = .vim/bundle/wal.vim
+	url = https://github.com/dylanaraps/wal.vim
+[submodule ".vim/bundle/vim-commentary"]
+	path = .vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule ".vim/bundle/vim-vue"]
+	path = .vim/bundle/vim-vue
+	url = https://github.com/posva/vim-vue
+[submodule ".vim/bundle/vim-stylus"]
+	path = .vim/bundle/vim-stylus
+	url = https://github.com/wavded/vim-stylus
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule ".vim/bundle/vim-jsx"]
+	path = .vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx
+[submodule ".vim/bundle/vim-pug"]
+	path = .vim/bundle/vim-pug
+	url = https://github.com/digitaltoad/vim-pug
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule ".vim/bundle/auto-pairs"]
+	path = .vim/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule ".vim/bundle/async.vim"]
+	path = .vim/bundle/async.vim
+	url = https://github.com/prabirshrestha/async.vim
+[submodule ".vim/bundle/vim-lsp"]
+	path = .vim/bundle/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp
+[submodule ".vim/bundle/vim-fixmyjs"]
+	path = .vim/bundle/vim-fixmyjs
+	url = https://github.com/ruanyl/vim-fixmyjs

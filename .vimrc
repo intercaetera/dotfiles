@@ -6,10 +6,10 @@ filetype plugin indent on
 set number
 highlight LineNr ctermfg=8
 
-" Tab width (spaces are for fags)
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 " Word wrap
 set wrap
@@ -21,9 +21,6 @@ set clipboard=unnamedplus
 " syntastic
 let g:syntastic_javascript_checkers = ['eslint'] 
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
 " word wrap
 set wrap linebreak nolist
 
@@ -33,9 +30,23 @@ let g:jsx_ext_required = 0
 " colorscheme
 colorscheme wal
 
-" notes
-let g:notes_directories = ['~/Documents/notes']
+" gutentags
+let g:gutentags_generate_on_write = 0
+let g:gutentags_ctags_exclude = [ 'node_modules/**' ]
 
+" language server
+" if executable('typescript-language-server')
+"     au User lsp_setup call lsp#register_server({
+"       \ 'name': 'typescript-language-server',
+"       \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+"       \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+"       \ 'whitelist': ['typescript', 'javascript', 'javascript.jsx']
+"       \ })
+" endif
+
+" fixjs
+let g:fixmyjs_engine = 'eslint'
+noremap <Leader><Leader>f :Fixmyjs<CR>
 
 " cursor
 let &t_SI = "\<Esc>[6 q"
