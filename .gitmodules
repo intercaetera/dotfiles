@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/vim-fixmyjs"]
 	path = .vim/bundle/vim-fixmyjs
 	url = https://github.com/ruanyl/vim-fixmyjs
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive

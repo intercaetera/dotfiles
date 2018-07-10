@@ -6,17 +6,25 @@ filetype plugin indent on
 set number
 highlight LineNr ctermfg=8
 
+" tabs and spaces
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+
+" swap files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 
 " Word wrap
 set wrap
 set linebreak
 
 " copy
-set clipboard=unnamedplus
+set clipboard=unnamed
+
+" unfuck backspace
+set backspace=indent,eol,start
 
 " syntastic
 let g:syntastic_javascript_checkers = ['eslint'] 
@@ -35,14 +43,14 @@ let g:gutentags_generate_on_write = 0
 let g:gutentags_ctags_exclude = [ 'node_modules/**' ]
 
 " language server
-" if executable('typescript-language-server')
-"     au User lsp_setup call lsp#register_server({
-"       \ 'name': 'typescript-language-server',
-"       \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-"       \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
-"       \ 'whitelist': ['typescript', 'javascript', 'javascript.jsx']
-"       \ })
-" endif
+if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+      \ 'name': 'typescript-language-server',
+      \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+      \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+      \ 'whitelist': ['typescript', 'javascript', 'javascript.jsx']
+      \ })
+endif
 
 " fixjs
 let g:fixmyjs_engine = 'eslint'
