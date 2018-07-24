@@ -49,3 +49,12 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/bundle/tsuquyomi"]
+	path = .vim/bundle/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi
+[submodule ".vim/bundle/typescript-vim"]
+	path = .vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
+[submodule ".vim/bundle/vim-closetag"]
+	path = .vim/bundle/vim-closetag
+	url = https://github.com/alvan/vim-closetag
