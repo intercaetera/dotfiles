@@ -85,8 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=vim
-alias tr='tree -I node-modules'
+alias tr='tree -I node_modules'
 alias lsd='ls -l | lolcat'
+alias newtags='`brew --prefix`/bin/ctags -R --exclude=@.gitignore'
 
 # Add bin to path
 PATH="${PATH}:${HOME}/.local/bin/"
