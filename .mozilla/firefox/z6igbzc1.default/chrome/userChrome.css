@@ -163,3 +163,7 @@ findbar {
 .devtools-side-splitter {
 	display: none;
 }
+
+statuspanel {
+	bottom: 38px !important;
+}
