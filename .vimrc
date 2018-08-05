@@ -26,6 +26,9 @@ set clipboard=unnamed
 " unfuck backspace
 set backspace=indent,eol,start
 
+" set wildignore
+set wildignore+=node_modules/**
+
 " closetag
 let g:closetag_filenames = '*.html,*.vue'
 
@@ -54,8 +57,9 @@ let g:jsx_ext_required = 0
 colorscheme wal
 
 " gutentags
-let g:gutentags_generate_on_write = 0
+let g:gutentags_generate_on_write = 1
 let g:gutentags_ctags_exclude = [ 'node_modules/**' ]
+set tags=./tags,tags;$HOME
 
 " language server
 if executable('typescript-language-server')
