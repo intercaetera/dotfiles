@@ -134,8 +134,8 @@ toolbarbutton {
 	position: static;
 }
 
-#main-window #content browser, .devtools-toolbox-side-iframe {
-	padding-bottom: 38px;
+browser, .devtools-toolbox-side-iframe {
+	margin-bottom: 38px;
 }
 
 #main-window[inFullscreen] #content browser {
